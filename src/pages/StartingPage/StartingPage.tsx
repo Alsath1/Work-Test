@@ -13,7 +13,9 @@ export const StartingPage = () => {
 			<div className={s.Input_and_search}>
 				<input type='search' placeholder='Введите название компании ' />
 
-				<div className={s.search}>Поиск</div>
+				<a className={s.search} href='/mainpage'>
+					Поиск
+				</a>
 			</div>
 			<div className={s.TextCont}>
 				<div className={s.TextMain}>

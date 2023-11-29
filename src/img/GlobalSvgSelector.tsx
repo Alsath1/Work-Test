@@ -1,8 +1,9 @@
 interface Props {
 	id: string;
+	opasyty?: string;
 }
 
-export const GlobalSvgSelector = ({ id }: Props) => {
+export const GlobalSvgSelector = ({ id, opasyty }: Props) => {
 	switch (id) {
 		case 'startingPageArrow':
 			return (
@@ -17,6 +18,38 @@ export const GlobalSvgSelector = ({ id }: Props) => {
 						d='M8 14L0.205771 0.500001L15.7942 0.5L8 14Z'
 						fill='black'
 						fill-opacity='0.77'
+					/>
+				</svg>
+			);
+		case 'st-up':
+			return (
+				<svg
+					width='16'
+					height='14'
+					viewBox='0 0 16 14'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<path
+						d='M8 0L15.7942 13.5H0.205771L8 0Z'
+						fill='#D9D9D9'
+						fill-opacity={opasyty}
+					/>
+				</svg>
+			);
+		case 'st-down':
+			return (
+				<svg
+					width='16'
+					height='14'
+					viewBox='0 0 16 14'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<path
+						d='M8 14L0.205771 0.500001L15.7942 0.5L8 14Z'
+						fill='#D9D9D9'
+						fill-opacity={opasyty}
 					/>
 				</svg>
 			);
