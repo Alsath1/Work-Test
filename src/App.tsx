@@ -5,6 +5,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import { StartingPage } from './pages/StartingPage/StartingPage';
 import { MainPageAllComp } from './pages/MainPageAllComp/MainPageAllComp';
 import { MainPageFilter } from './pages/MainPageFilter/MainPageFilter';
+import { CompInfo } from './pages/CompInfo/CompInfo';
 
 function App() {
 	return (
@@ -12,7 +13,7 @@ function App() {
 			<Routes>
 				<Route path='/' element={<StartingPage />}></Route>
 				<Route path='/mainpage' element={<MainPageAllComp />}></Route>
-				<Route path='/mainpage/filter' element={<MainPageFilter />}></Route>
+				<Route path='/mainpageCard' element={<CompInfo />}></Route>
 			</Routes>
 		</div>
 	);

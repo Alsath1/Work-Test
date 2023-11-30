@@ -15,7 +15,9 @@ export const MainPageAllComp = () => {
 		<>
 			<MainPageFilter />
 			<div className={s.mainCont}>
-				<div className={s.CompanyList}>Company List</div>
+				<a className={s.CompanyList} href='/'>
+					Company List
+				</a>
 				<div className={s.semiCont}>
 					<div className={s.ContFlex}>
 						<div className={s.compList}>

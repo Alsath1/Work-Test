@@ -14,6 +14,7 @@ export const CompCart = () => {
 				<div className={s.star}>
 					<GlobalSvgSelector />
 					<div className={s.bal}>4.6</div>
+					<a href='/mainpageCard'>Подробнее</a>
 				</div>
 			</div>
 		</div>
