@@ -5,6 +5,21 @@ interface Props {
 
 export const GlobalSvgSelector = ({ id, opasyty }: Props) => {
 	switch (id) {
+		case 'star':
+			return (
+				<svg
+					width='40'
+					height='37'
+					viewBox='0 0 40 37'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<path
+						d='M20.0273 0L24.6206 13.8197H39.485L27.4595 22.3607L32.0528 36.1803L20.0273 27.6393L8.00169 36.1803L12.5951 22.3607L0.569487 13.8197H15.4339L20.0273 0Z'
+						fill='white'
+					/>
+				</svg>
+			);
 		case 'st-left':
 			return (
 				<svg

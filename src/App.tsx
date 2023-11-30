@@ -4,7 +4,6 @@ import s from './App.module.sass';
 import { Routes, Route, Link } from 'react-router-dom';
 import { StartingPage } from './pages/StartingPage/StartingPage';
 import { MainPageAllComp } from './pages/MainPageAllComp/MainPageAllComp';
-import { MainPageFilter } from './pages/MainPageFilter/MainPageFilter';
 import { CompInfo } from './pages/CompInfo/CompInfo';
 
 function App() {

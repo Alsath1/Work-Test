@@ -1,6 +1,7 @@
 import s from './MainPageAllComp.module.sass';
 import i from './1.png';
 import { GlobalSvgSelector } from 'src/img/GlobalSvgSelector';
+import { Link } from 'react-router-dom';
 export const CompCart = () => {
 	return (
 		<div className={s.CartCont}>
@@ -14,7 +15,7 @@ export const CompCart = () => {
 				<div className={s.star}>
 					<GlobalSvgSelector />
 					<div className={s.bal}>4.6</div>
-					<a href='/mainpageCard'>Подробнее</a>
+					<Link to='/mainpageCard'>Подробнее</Link>
 				</div>
 			</div>
 		</div>

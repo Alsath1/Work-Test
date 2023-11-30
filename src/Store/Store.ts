@@ -1,8 +1,8 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import userReducer from './redusers/UserSlice';
+import CompSlice from './redusers/UserSlice';
 import WinStateSlice from './redusers/WindowState';
 const rootReduser = combineReducers({
-	userReducer,
+	CompSlice,
 	WinStateSlice
 });
 

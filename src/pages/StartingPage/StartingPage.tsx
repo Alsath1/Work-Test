@@ -1,21 +1,42 @@
 import { GlobalSvgSelector } from 'src/img/GlobalSvgSelector';
 import s from './StartingPage.module.sass';
+import { Link } from 'react-router-dom';
+import { useAppDispatch, useAppSelector } from 'src/hooks/redux';
+import { WinStateSlice } from 'src/Store/redusers/WindowState';
+import { useState } from 'react';
 
 export const StartingPage = () => {
+	const { winCurrent } = useAppSelector(state => state.WinStateSlice);
+	const { winCurrentstring } = WinStateSlice.actions;
+	const dispatch = useAppDispatch();
+	const [inputLink, setInputLink] = useState('');
+
 	return (
 		<div className={s.cont}>
 			<div className={s.CompList_and_SitySelector}>
 				<div className={s.CompList}>Company List</div>
-				<div className={s.SitySel}>
-					Москва <GlobalSvgSelector id='startingPageArrow' />
-				</div>
+				<div className={s.SitySel}></div>
 			</div>
 			<div className={s.Input_and_search}>
-				<input type='search' placeholder='Введите название компании ' />
+				<input
+					type='search'
+					placeholder='Введите название компании '
+					onChange={e => {
+						// ПОЧИНИТЬ Сделать дебаунс
+						setInputLink(e.currentTarget.value);
+					}}
+				/>
 
-				<a className={s.search} href='/mainpage'>
+				<Link
+					style={{ textDecoration: 'none', color: '#FFF' }}
+					className={s.search}
+					to='/mainpage'
+					onClick={() => {
+						dispatch(winCurrentstring(inputLink));
+					}}
+				>
 					Поиск
-				</a>
+				</Link>
 			</div>
 			<div className={s.TextCont}>
 				<div className={s.TextMain}>
