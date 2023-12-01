@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { GlobalSvgSelector } from 'src/img/GlobalSvgSelector';
 import { CompSlice } from 'src/Store/redusers/UserSlice';
 import { useEffect } from 'react';
+import { Map1 } from 'src/Map1';
 
 // Переделать на итерацтю массива по фильтрам Comp List
 export const MainPageAllComp = () => {
@@ -95,7 +96,9 @@ export const MainPageAllComp = () => {
 									/>
 								</div>
 							</div>
-							<img src={i} />
+							<div className={s.maps}>
+								<Map1></Map1>
+							</div>
 						</div>
 					</div>
 				</div>
